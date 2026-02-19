@@ -37,7 +37,6 @@ print(df['type'].value_counts())
 print('\nBY REGION:')
 print(df['region_category'].value_counts())
 
-# %%
 # Color schemes
 COMPANY_COLORS = {
     'Pasha Insurance': '#E53935',
@@ -174,10 +173,8 @@ plt.tight_layout()
 plt.savefig(os.path.join(CHARTS_DIR, '06_top_regional_cities.png'), dpi=150, facecolor='white')
 plt.show()
 
-# %% [markdown]
-# ## Chart 7: Specialty Services (Dental & Optics)
+# Chart 7: Specialty Services (Dental & Optics)
 
-# %%
 fig, ax = plt.subplots(figsize=(10, 6))
 specialty_data = []
 for source in df['source'].unique():
@@ -205,10 +202,8 @@ plt.tight_layout()
 plt.savefig(os.path.join(CHARTS_DIR, '07_specialty_services.png'), dpi=150, facecolor='white')
 plt.show()
 
-# %% [markdown]
-# ## Chart 8: Azerbaijan Geographic Map
+# Chart 8: Azerbaijan Geographic Map
 
-# %%
 fig, ax = plt.subplots(figsize=(12, 9))
 geo_df = df[(df['latitude'].notna()) & (df['longitude'].notna())]
 geo_df = geo_df[(geo_df['latitude'] >= 38.5) & (geo_df['latitude'] <= 42) & (geo_df['longitude'] >= 44.5) & (geo_df['longitude'] <= 51)]
@@ -226,10 +221,8 @@ plt.tight_layout()
 plt.savefig(os.path.join(CHARTS_DIR, '08_azerbaijan_map.png'), dpi=150, facecolor='white')
 plt.show()
 
-# %% [markdown]
-# ## Summary Statistics
+# Summary Statistics
 
-# %%
 print('=' * 50)
 print('SUMMARY')
 print('=' * 50)
